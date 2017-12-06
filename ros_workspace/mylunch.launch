@@ -1,0 +1,22 @@
+<launch>
+    <node name="sound_play" pkg="sound_play" type="soundplay_node.py"/>
+
+    <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+        <param name="video_device" value="/dev/video1" />
+        <param name="image_width" value="320" />
+        <param name="image_height" value="240" />
+        <param name="pixel_format" value="yuyv" />
+        <param name="camera_frame_id" value="usb_cam" />
+        <param name="io_method" value="mmap"/>
+        <rosparam param="D">[0.12941234133963345, -0.1460600263015886, -0.011622301801268678, -0.020115185874881723, 0.0]</rosparam>
+        <rosparam param="K">[832.2357140927728, 0.0, 277.19588710532776, 0.0, 831.9793810442026, 199.50786373627267, 0.0, 0.0, 1.0]</rosparam>
+        <rosparam param="R">[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]</rosparam>
+        <rosparam param="P">[846.3146362304688, 0.0, 269.889879625709, 0.0, 0.0, 853.8421630859375, 196.40245512759975, 0.0, 0.0, 0.0, 1.0, 0.0]</rosparam>
+    </node>
+
+   <!-- <node name="my_package" pkg="my_package" type="my_package.py"/> --> 
+
+
+
+  <!-- <node name="rviz" pkg="rviz" type="rviz"/> -->
+</launch>
