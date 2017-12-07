@@ -7,5 +7,6 @@ Virtualenv is a tool to isolate python environment
 
 $ virtualenv -p /usr/bin/python2.7 .
 
+$ source bin/activate
 
-
+(videoCapture) $ pip install pyserial
